@@ -91,7 +91,6 @@ session_start();
 								<font style="font-style:normal; font-size: 33px;color: black;font-family: serif">
                                         SecondHand
                                     </font>
-									
 								</a>
 							</div>
 						</div>
