@@ -18,7 +18,7 @@ if(file_exists($path)==true)
 }
 else
 {}
-/*this is delet query*/
+/*this is delete query*/
 mysqli_query($con,"delete from barang where id_barang='$id_barang'")or die("query is incorrect...");
 }
 
@@ -45,15 +45,15 @@ include "topheader.php";
          <div class="col-md-14">
             <div class="card ">
               <div class="card-header card-header-primary">
-                <h4 class="card-title"> Products List</h4>
+                <h4 class="card-title">Urutan Produk</h4>
                 
               </div>
               <div class="card-body">
                 <div class="table-responsive ps">
                   <table class="table tablesorter " id="page1">
                     <thead class=" text-primary">
-                      <tr><th>Image</th><th>Name</th><th>Price</th><th>
-	<a class=" btn btn-primary" href="addproduct.php">Add New</a></th></tr></thead>
+                      <tr><th>Gambar</th><th>Nama</th><th>Harga</th><th>
+	<a class=" btn btn-primary" href="addproduct.php">Tambahkan Produk</a></th></tr></thead>
                     <tbody>
                       <?php 
 
@@ -65,7 +65,7 @@ include "topheader.php";
                         <td>$price</td>
                         <td>
 
-                        <a class=' btn btn-success' href='clothes_list.php?id_barang=$id_barang&action=delete'>Delete</a>
+                        <a class=' btn btn-success' href='clothes_list.php?id_barang=$id_barang&action=delete'>Hapus</a>
                         </td></tr>";
                         }
 

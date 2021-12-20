@@ -36,7 +36,7 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item">
             <a class="nav-link" href="adduser.php">
               <p>Tambahkan Pengguna</p>
             </a>
@@ -45,25 +45,23 @@
             <a class="nav-link" href="productlist.php">
               <p>Urutan Produk</p>
             </a>
-            
-          </li>
-          
-          <li class="nav-item ">
+          </li>          
+          <li class="nav-item">
             <a class="nav-link" href="orders.php">
               <p>Urutan Pesanan</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item">
             <a class="nav-link" href="addproduct.php">
               <p>Tambahkan Produk</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item">
             <a class="nav-link" href="manageuser.php">
               <p>Pengaturan Pengguna</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item">
             <a class="nav-link" href="barangpesanan.php">
               <p>Barang Pesanan</p>
             </a>
