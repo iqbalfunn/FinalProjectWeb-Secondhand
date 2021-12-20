@@ -18,7 +18,7 @@
 
 <body class="dark-edition">
   <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="black" data-image="./assets/img/sidebar-2.jpg">
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="">
       <!--
       Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -26,7 +26,7 @@
   -->
       <div class="logo">
         <a href="" class="simple-text logo-normal">
-          Taka
+          SecondHand
         </a>
       </div>
       <div class="sidebar-wrapper ps-container ps-theme-default" data-ps-id="3a8db1f4-24d8-4dbf-85c9-4f5215c1b29a">

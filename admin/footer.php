@@ -4,7 +4,7 @@
             <ul>
               <li>
                 <a href="">
-                  TAKA
+                  SecondHand
                 </a>
               </li>
             </ul>
@@ -14,7 +14,7 @@
             <script>
               document.write(new Date().getFullYear())
             </script>, made with <i class="material-icons">favorite</i> by
-            <a href="" target="_blank">Taka</a> for a better web.
+            <a href="" target="_blank">SecondHand</a>
           </div>
           <!-- your footer here -->
         </div>
