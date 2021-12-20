@@ -14,20 +14,20 @@ include "topheader.php";
             <?php  //success message
             if(isset($_POST['success'])) {
             $success = $_POST["success"];
-            echo "<h1 style='color:#0C0'>Your Product was added successfully &nbsp;&nbsp;  <span class='glyphicon glyphicon-ok'></h1></span>";
+            echo "<h1 style='color:#0C0'>Produk berhasil ditambahkan &nbsp;&nbsp;  <span class='glyphicon glyphicon-ok'></h1></span>";
             }
             ?></a>
                 </div>
                 <div class="col-md-14">
             <div class="card ">
               <div class="card-header card-header-primary">
-                <h4 class="card-title"> Users List</h4>
+                <h4 class="card-title">Urutan Pengguna</h4>
               </div>
               <div class="card-body">
                 <div class="table-responsive ps">
                   <table class="table table-hover tablesorter " id="">
                     <thead class=" text-primary">
-                        <tr><th>ID</th><th>NamaDepan</th><th>NamaBelakang</th><th>Email</th><th>Password</th><th>Contact</th><th>Alamat</th><th>Kota</th>
+                        <tr><th>ID</th><th>Nama Depan</th><th>Nama Belakang</th><th>Email</th><th>Password</th><th>Contact</th><th>Alamat</th><th>Kota</th>
                     </tr></thead>
                     <tbody>
                       <?php 
@@ -50,13 +50,13 @@ include "topheader.php";
             <div class="col-md-6">
             <div class="card ">
               <div class="card-header card-header-primary">
-                <h4 class="card-title"> Categories List</h4>
+                <h4 class="card-title">Urutan Kategori</h4>
               </div>
               <div class="card-body">
                 <div class="table-responsive ps">
                   <table class="table table-hover tablesorter " id="">
                     <thead class=" text-primary">
-                        <tr><th>ID</th><th>Categories</th><th>Count</th>
+                        <tr><th>ID</th><th>Kategori</th><th>Jumlah</th>
                     </tr></thead>
                     <tbody>
                       <?php 
@@ -83,13 +83,13 @@ include "topheader.php";
           <div class="col-md-6">
             <div class="card ">
               <div class="card-header card-header-primary">
-                <h4 class="card-title">Brands List</h4>
+                <h4 class="card-title">Urutan Merk</h4>
               </div>
               <div class="card-body">
                 <div class="table-responsive ps">
                   <table class="table table-hover tablesorter " id="">
                     <thead class=" text-primary">
-                        <tr><th>ID</th><th>Merek</th><th>Count</th>
+                        <tr><th>ID</th><th>Merk</th><th>Jumlah</th>
                     </tr></thead>
                     <tbody>
                       <?php 
@@ -118,13 +118,13 @@ include "topheader.php";
            <div class="col-md-5">
             <div class="card ">
               <div class="card-header card-header-primary">
-                <h4 class="card-title">Subscribers</h4>
+                <h4 class="card-title">Urutan Admin</h4>
               </div>
               <div class="card-body">
                 <div class="table-responsive ps">
                   <table class="table table-hover tablesorter " id="">
                     <thead class=" text-primary">
-                        <tr><th>ID</th><th>email</th>
+                        <tr><th>ID</th><th>Email</th>
                     </tr></thead>
                     <tbody>
                       <?php 
