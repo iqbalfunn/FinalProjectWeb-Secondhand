@@ -88,9 +88,9 @@ session_start();
 						<div class="col-md-3">
 							<div class="header-logo">
 								<a href="#" class="logo">
-								<font style="font-style:normal; font-size: 33px;color: black;font-family: serif">
+								<p style="font-style:normal; font-size: 33px;color: black;font-family: serif">
                                         SecondHand
-                                    </font>
+									</p>
 								</a>
 							</div>
 						</div>
@@ -99,7 +99,7 @@ session_start();
 						<div class="col-md-6">
 							<div class="wrapper">
 								<input type="text" class="input" 
-								placeholder="Search">
+								placeholder="Cari Barang">
 								<div class="searchbtn"><i class="fas fa-search"></i></div>
 							</div>
 						</div>
@@ -152,7 +152,7 @@ session_start();
                                 echo '
                         
                                     <a href="" data-toggle="modal" data-target="#Modal_login"><button type="button" class="btn btn-success">Login</button></a>
-                                    <a href="" data-toggle="modal" data-target="#Modal_register"><button type="button" class="btn btn-primary">Register</button></a>
+                                    <a href="" data-toggle="modal" data-target="#Modal_register"><button type="button" class="btn btn-primary">Daftar</button></a>
                                     
                                   </div>
                                 </div>';
