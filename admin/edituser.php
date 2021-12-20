@@ -39,25 +39,25 @@ include "topheader.php";
                     <div class="col-md-12 ">
                       <div class="form-group">
                         <label>Nama Depan</label>
-                        <input type="text" id="nama_depan" name="nama_depan"  class="form-control" value="<?php echo $nama_depan; ?>">
+                        <input type="text" id="nama_depan" name="nama_depan"  class="form-control" value="<?php echo $nama_depan;?>">
                       </div>
                     </div>
                     <div class="col-md-12 ">
                       <div class="form-group">
                         <label>Nama Belakang</label>
-                        <input type="text" id="nama_belakang" name="nama_belakang" class="form-control" value="<?php echo $nama_belakang; ?>">
+                        <input type="text" id="nama_belakang" name="nama_belakang" class="form-control" value="<?php echo $nama_belakang;?>">
                       </div>
                     </div>
                     <div class="col-md-12 ">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Email</label>
+                        <label">Email</label>
                         <input type="email"  id="email" name="email" class="form-control" value="<?php echo $email;?>">
                       </div>
                     </div>
                     <div class="col-md-12 ">
                       <div class="form-group">
-                        <label >Password</label>
-                        <input type="text" name="password" id="password" class="form-control" value="<?php echo $user_password; ?>">
+                        <label>Password</label>
+                        <input type="text" name="password" id="password" class="form-control" value="<?php echo $user_password;?>">
                       </div>
                     </div>
                   
