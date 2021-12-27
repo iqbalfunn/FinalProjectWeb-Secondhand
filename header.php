@@ -87,7 +87,7 @@ session_start();
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="#" class="logo">
+								<a href="index.php" class="logo">
 								<p style="font-style:normal; font-size: 33px;color: black;font-family: serif">
                                         SecondHand
 									</p>
