@@ -16,9 +16,9 @@ if(isset($_POST["categoryhome"])){
 					<!-- NAV -->
 					<ul class='main-nav nav navbar-nav'>
                     	<li><a href='index.php'>Home</a></li>
-                    	<li><a href='shop.php'>APA SAJA</a></li>
-
-
+                    	<li><a href='shop.php'>Kendaraan</a></li>
+                    	<li><a href='shop.php'>Elektronik</a></li>
+                    	<li><a href='shop.php'>Alat Rumah Tangga</a></li>
 
 	";
 	if(mysqli_num_rows($run_query) > 0){
