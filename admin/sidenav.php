@@ -18,7 +18,7 @@
 
 <body >
   <div class="wrapper">
-    <div class="sidebar" data-color="azure" data-background-color="" data-image="">
+    <div class="sidebar" data-color="danger" data-background-color="" data-image="">
       <!--
       Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
