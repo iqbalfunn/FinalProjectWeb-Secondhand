@@ -18,7 +18,7 @@
 
 <body >
   <div class="wrapper">
-    <div class="sidebar" data-color="danger" data-background-color="" data-image="">
+    <div class="sidebar" data-color="purple" data-background-color="" data-image="">
       <!--
       Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -31,7 +31,7 @@
       </div>
       <div class="sidebar-wrapper ps-container ps-theme-default" data-ps-id="3a8db1f4-24d8-4dbf-85c9-4f5215c1b29a">
         <ul class="nav">
-          <li class="nav-item active">
+          <li class="nav-item ">
             <a class="nav-link" href="index.php">
               <p>Dashboard</p>
             </a>
