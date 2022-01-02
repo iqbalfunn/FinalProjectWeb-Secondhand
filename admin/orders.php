@@ -38,13 +38,13 @@ include "topheader.php";
           <div class="col-md-14">
             <div class="card ">
               <div class="card-header card-header-primary">
-                <h4 class="card-title">Urutan Pesanan<?php echo $page;?> </h4>
+                <h4 class="card-title">Orders  / Page <?php echo $page;?> </h4>
               </div>
               <div class="card-body">
                 <div class="table-responsive ps">
                   <table class="table table-hover tablesorter " id="">
                     <thead class=" text-primary">
-                      <tr><th>Nomor Pesanan</th><th>Id User</th><th>Nama Customer</th><th>Email</th><th>Alamat</th><th>Kota</th><th>Kode Pos</th><th>Harga Keseluruhan</th><th>Nomer Kartu Pembayaran</th>
+                      <tr><th>Nomer Pesanan</th><th>Id User</th><th>Nama Kostumer</th><th>Email</th><th>Alamat</th><th>Kota</th><th>Kode Pos</th><th>Harga Keseluruhan</th><th>Nomer Kartu Pembayaran</th>
                     </tr></thead>
                     <tbody>
                       <?php 

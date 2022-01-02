@@ -19,15 +19,15 @@ include "topheader.php";
          <div class="col-md-14">
             <div class="card ">
               <div class="card-header card-header-primary">
-                <h4 class="card-title">Pengaturan Pengguna</h4>
+                <h4 class="card-title">Manage User</h4>
               </div>
               <div class="card-body">
                 <div class="table-responsive ps">
                   <table class="table tablesorter table-hover" id="">
                     <thead class=" text-primary">
-                      <tr><th>Username</th>
-                <th>Password</th>
-	<th><a href="adduser.php" class="btn btn-success">Tambahkan Baru</a></th>
+                      <tr><th>User Name</th>
+                <th>User Password</th>
+	<th><a href="adduser.php" class="btn btn-success">Add New</a></th>
                     </tr></thead>
                     <tbody>
                       <?php 
@@ -40,10 +40,10 @@ include "topheader.php";
 
                         echo"<td>
                         <a href='edituser.php?user_id=$user_id' type='button' rel='tooltip' title='' class='btn btn-info btn-link btn-sm' data-original-title='Edit User'>
-                                <i class='material-icons'>Edit</i>
+                                <i class='material-icons'>edit</i>
                               <div class='ripple-container'></div></a>
                         <a href='manageuser.php?user_id=$user_id&action=delete' type='button' rel='tooltip' title='' class='btn btn-danger btn-link btn-sm' data-original-title='Delete User'>
-                                <i class='material-icons'>Hapus</i>
+                                <i class='material-icons'>close</i>
                               <div class='ripple-container'></div></a>
                         </td></tr>";
                         }

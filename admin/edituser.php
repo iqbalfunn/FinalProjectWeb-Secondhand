@@ -30,34 +30,34 @@ include "topheader.php";
         <div class="col-md-5 mx-auto">
             <div class="card">
               <div class="card-header card-header-primary">
-                <h5 class="title">Pengaturan Pengguna</h5>
+                <h5 class="title">Edit User</h5>
               </div>
               <form action="edituser.php" name="form" method="post" enctype="multipart/form-data">
               <div class="card-body">
                 
-                  <input type="hidden" name="user_id" id="user_id" value="<?php echo $user_id;?>">
+                  <input type="hidden" name="user_id" id="user_id" value="<?php echo $user_id;?>" />
                     <div class="col-md-12 ">
                       <div class="form-group">
-                        <label>Nama Depan</label>
-                        <input type="text" id="nama_depan" name="nama_depan"  class="form-control" value="<?php echo $nama_depan;?>">
+                        <label>First name</label>
+                        <input type="text" id="nama_depan" name="nama_depan"  class="form-control" value="<?php echo $nama_depan; ?>" >
                       </div>
                     </div>
                     <div class="col-md-12 ">
                       <div class="form-group">
-                        <label>Nama Belakang</label>
-                        <input type="text" id="nama_belakang" name="nama_belakang" class="form-control" value="<?php echo $nama_belakang;?>">
+                        <label>Last name</label>
+                        <input type="text" id="nama_belakang" name="nama_belakang" class="form-control" value="<?php echo $nama_belakang; ?>" >
                       </div>
                     </div>
                     <div class="col-md-12 ">
                       <div class="form-group">
-                        <label">Email</label>
-                        <input type="email"  id="email" name="email" class="form-control" value="<?php echo $email;?>">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email"  id="email" name="email" class="form-control" value="<?php echo $email; ?>">
                       </div>
                     </div>
                     <div class="col-md-12 ">
                       <div class="form-group">
-                        <label>Password</label>
-                        <input type="text" name="password" id="password" class="form-control" value="<?php echo $user_password;?>">
+                        <label >Password</label>
+                        <input type="text" name="password" id="password" class="form-control" value="<?php echo $user_password; ?>">
                       </div>
                     </div>
                   
