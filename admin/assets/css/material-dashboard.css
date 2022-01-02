@@ -14738,9 +14738,9 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   color: #fff;
 }
 
-.sidebar[data-color="green"] li.active>a {
-  background-color: green;
-  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
+.sidebar[data-color="purple"] li.active>a {
+  background-color: #8359a3;
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(131, 89, 163, 0.4);
 }
 
 .sidebar[data-color="azure"] li.active>a {
