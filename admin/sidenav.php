@@ -63,11 +63,6 @@
               <p>Manage User</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="index.php">
-              <p>Logout</p>
-            </a>
-          </li>
           <!-- <li class="nav-item active-pro ">
                 <a class="nav-link" href="./upgrade.html">
                     <i class="material-icons">unarchive</i>
