@@ -2,84 +2,6 @@
 session_start();
 $ip_add = getenv("REMOTE_ADDR");
 include "db.php";
-if(isset($_POST["category"])){
-	$category_query = "SELECT * FROM kategori";
-    
-	$run_query = mysqli_query($con,$category_query) or die(mysqli_error($con));
-	echo "
-		
-            
-            <div class='aside'>
-							<h3 class='aside-title'>Kategori</h3>
-							<div class='btn-group-vertical'>
-	";
-	if(mysqli_num_rows($run_query) > 0){
-        $i=1;
-		while($row = mysqli_fetch_array($run_query)){
-            
-			$cid = $row["cat_id"];
-			$cat_name = $row["cat_title"];
-            $sql = "SELECT COUNT(*) AS count_items FROM barang WHERE kategori_barang=$i";
-            $query = mysqli_query($con,$sql);
-            $row = mysqli_fetch_array($query);
-            $count=$row["count_items"];
-            $i++;
-            
-            
-			echo "
-					
-                    <div type='button' class='btn navbar-btn category' cid='$cid'>
-									
-									<a href='#'>
-										<span  ></span>
-										$cat_name
-										<small class='qty'>($count)</small>
-									</a>
-								</div>
-                    
-			";
-            
-		}
-        
-        
-		echo "</div>";
-	}
-}
-if(isset($_POST["brand"])){
-	$brand_query = "SELECT * FROM merek";
-	$run_query = mysqli_query($con,$brand_query);
-	echo "
-		<div class='aside'>
-							<h3 class='aside-title'>Brand</h3>
-							<div class='btn-group-vertical'>
-	";
-	if(mysqli_num_rows($run_query) > 0){
-        $i=1;
-		while($row = mysqli_fetch_array($run_query)){
-            
-			$bid = $row["brand_id"];
-			$brand_name = $row["nama_brand"];
-            $sql = "SELECT COUNT(*) AS count_items FROM barang WHERE merek_barang=$i";
-            $query = mysqli_query($con,$sql);
-            $row = mysqli_fetch_array($query);
-            $count=$row["count_items"];
-            $i++;
-			echo "
-					
-                    
-                    <div type='button' class='btn navbar-btn selectBrand' bid='$bid'>
-									
-									<a href='#'>
-										<span ></span>
-										$brand_name
-										<small >($count)</small>
-									</a>
-								</div>
-			";
-		}
-		echo "</div>";
-	}
-}
 if(isset($_POST["page"])){
 	$sql = "SELECT * FROM barang";
 	$run_query = mysqli_query($con,$sql);
@@ -107,7 +29,6 @@ if(isset($_POST["getProduct"])){
 		while($row = mysqli_fetch_array($run_query)){
 			$pro_id    = $row['id_barang'];
 			$pro_cat   = $row['kategori_barang'];
-			$pro_brand = $row['merek_barang'];
 			$pro_title = $row['nama_barang'];
 			$pro_price = $row['harga_barang'];
 			$pro_image = $row['gambar_barang'];
@@ -116,7 +37,7 @@ if(isset($_POST["getProduct"])){
 			echo "
 				
                         
-                        <div class='col-md-4 col-xs-6' >
+                        <div class='col-md-3 col-xs-6' >
 								<a href='barang.php?p=$pro_id'><div class='product'>
 									<div class='product-img'>
 										<img src='product_images/$pro_image' style='max-height: 170px;' alt=''>
@@ -126,8 +47,6 @@ if(isset($_POST["getProduct"])){
 										<h3 class='product-name header-cart-item-name'><a href='barang.php?p=$pro_id'>$pro_title</a></h3>
 										<h4 class='product-price header-cart-item-info'>$pro_price</h4>
 										<div class='product-btns'>
-											<button class='add-to-wishlist'><i class='fa fa-heart-o'></i><span class='tooltipp'>add to wishlist</span></button>
-											<button class='add-to-compare'><i class='fa fa-exchange'></i><span class='tooltipp'>add to compare</span></button>
 											<button class='quick-view'><i class='fa fa-eye'></i><span class='tooltipp'>quick view</span></button>
 										</div>
 									</div>
@@ -141,61 +60,6 @@ if(isset($_POST["getProduct"])){
 		}
 	}
 }
-
-
-if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isset($_POST["search"])){
-	if(isset($_POST["get_seleted_Category"])){
-		$id = $_POST["cat_id"];
-		$sql = "SELECT * FROM barang,kategori WHERE kategori_barang = '$id' AND kategori_barang=cat_id";
-        
-	}else if(isset($_POST["selectBrand"])){
-		$id = $_POST["brand_id"];
-		$sql = "SELECT * FROM barang,kategori WHERE merek_barang = '$id' AND kategori_barang=cat_id";
-	}else {
-        
-		$keyword = $_POST["keyword"];
-        header('Location:shop.php');
-		$sql = "SELECT * FROM barang,kategori WHERE kategori_barang=cat_id AND katakunci_barang LIKE '%$keyword%'";
-       
-	}
-	
-	$run_query = mysqli_query($con,$sql);
-	while($row=mysqli_fetch_array($run_query)){
-			$pro_id    = $row['id_barang'];
-			$pro_cat   = $row['kategori_barang'];
-			$pro_brand = $row['merek_barang'];
-			$pro_title = $row['nama_barang'];
-			$pro_price = $row['harga_barang'];
-			$pro_image = $row['gambar_barang'];
-            $cat_name = $row["cat_title"];
-			echo "
-					
-                        
-                        <div class='col-md-4 col-xs-6'>
-								<a href='barang.php?p=$pro_id'><div class='product'>
-									<div class='product-img'>
-										<img  src='product_images/$pro_image'  style='max-height: 170px;' alt=''>
-									</div></a>
-									<div class='product-body'>
-										<p class='product-category'>$cat_name</p>
-										<h3 class='product-name header-cart-item-name'><a href='barang.php?p=$pro_id'>$pro_title</a></h3>
-										<h4 class='product-price header-cart-item-info'>$pro_price</h4>
-										<div class='product-btns'>
-											<button class='add-to-wishlist' tabindex='0'><i class='fa fa-heart-o'></i><span class='tooltipp'>add to wishlist</span></button>
-											<button class='add-to-compare'><i class='fa fa-exchange'></i><span class='tooltipp'>add to compare</span></button>
-											<button class='quick-view' ><i class='fa fa-eye'></i><span class='tooltipp'>quick view</span></button>
-										</div>
-									</div>
-									<div class='add-to-cart'>
-										<button pid='$pro_id' id='product' href='#' tabindex='0' class='add-to-cart-btn'><i class='fa fa-shopping-cart'></i>Keranjang</button>
-									</div>
-								</div>
-							</div>
-			";
-		}
-	}
-	
-
 
 	if(isset($_POST["addToCart"])){
 		
@@ -216,7 +80,7 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 						<a href='#' class='close' data-dismiss='alert' aria-label='close'></a>
 						<b>Barang Sudah Di Simpan..!</b>
 				</div>
-			";//not in video
+			";
 		} else {
 			$sql = "INSERT INTO `keranjang`
 			(`p_id`, `ip_add`, `user_id`, `kapasitas`) 
@@ -261,13 +125,14 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 		
 	}
 
-//Count User cart item
+
+//menghitung item keranjang Pengguna 
 if (isset($_POST["count_item"])) {
-	//When user is logged in then we will count number of item in cart by using user session id
+	// Ketika pengguna login maka akan menghitung jumlah item di keranjang dengan menggunakan id session pengguna
 	if (isset($_SESSION["uid"])) {
 		$sql = "SELECT COUNT(*) AS count_item FROM keranjang WHERE user_id = $_SESSION[uid]";
 	}else{
-		//When user is not logged in then we will count number of item in cart by using users unique ip address
+		// Ketika pengguna tidak login maka akan menghitung jumlah item di keranjang dengan menggunakan alamat ip unik pengguna
 		$sql = "SELECT COUNT(*) AS count_item FROM keranjang WHERE ip_add = '$ip_add' AND user_id < 0";
 	}
 	
@@ -276,21 +141,21 @@ if (isset($_POST["count_item"])) {
 	echo $row["count_item"];
 	exit();
 }
-//Count User cart item
+//Hitung item keranjang Pengguna
 
-//Get Cart Item From Database to Dropdown menu
+//Dapatkan Item Keranjang Dari Database ke Menu Dropdown
 if (isset($_POST["Common"])) {
 
 	if (isset($_SESSION["uid"])) {
-		//When user is logged in this query will execute
+		//Ketika pengguna masuk, kueri ini akan dieksekusi
 		$sql = "SELECT a.id_barang,a.nama_barang,a.harga_barang,a.deskripsi_barang,a.gambar_barang,b.id,b.kapasitas FROM barang a,keranjang b WHERE a.id_barang=b.p_id AND b.user_id='$_SESSION[uid]'";
 	}else{
-		//When user is not logged in this query will execute
+		//Ketika pengguna tidak masuk, kueri ini akan dijalankan
 		$sql = "SELECT a.id_barang,a.nama_barang,a.deskripsi_barang,a.harga_barang,a.gambar_barang,b.id,b.kapasitas FROM barang a,keranjang b WHERE a.id_barang=b.p_id AND b.ip_add='$ip_add' AND b.user_id < 0";
 	}
 	$query = mysqli_query($con,$sql);
 	if (isset($_POST["getCartItem"])) {
-		//display cart item in dropdown menu
+		//tampilkan item keranjang di menu dropdown
 		if (mysqli_num_rows($query) > 0) {
 			$n=0;
 			$total_price=0;
@@ -313,7 +178,7 @@ if (isset($_POST["Common"])) {
 												</div>
 												<div class="product-body">
 													<h3 class="product-name"><a href="#">'.$nama_barang.'</a></h3>
-													<h4 class="product-price"><span class="qty">'.$n.'</span>$'.$harga_barang.'</h4>
+													<h4 class="product-price"><span class="qty">'.$n.'</span>Rp'.$harga_barang.'</h4>
 												</div>
 												
 											</div>'
@@ -324,8 +189,8 @@ if (isset($_POST["Common"])) {
 			}
             
             echo '<div class="cart-summary">
-				    <small class="qty">'.$n.' Item(s) selected</small>
-				    <h5>$'.$total_price.'</h5>
+				    <small class="qty">'.$n.' Item Dipilih</small>
+				    <h5>Rp'.$total_price.'</h5>
 				</div>'
             ?>
 				
@@ -340,7 +205,7 @@ if (isset($_POST["Common"])) {
     
     if (isset($_POST["checkOutDetails"])) {
 		if (mysqli_num_rows($query) > 0) {
-			//display user cart item with "Ready to checkout" button if user is not login
+			//tampilkan item keranjang pengguna dengan tombol "Siap untuk checkout" jika pengguna tidak login
 			echo '<div class="main ">
 			<div class="table-responsive">
 			<form method="post" action="login_form.php">
@@ -409,7 +274,7 @@ if (isset($_POST["Common"])) {
 				<tfoot>
 					
 					<tr>
-						<td><a href="shop.php" class="btn btn-warning"><i class="fa fa-angle-left"></i>Lanjut Belanjga</a></td>
+						<td><a href="shop.php" class="btn btn-warning"><i class="fa fa-angle-left"></i>Lanjut Belanja</a></td>
 						<td colspan="2" class="hidden-xs"></td>
 						<td class="hidden-xs text-center"><b class="net_total" ></b></td>
 						<div id="issessionset"></div>
@@ -425,7 +290,7 @@ if (isset($_POST["Common"])) {
 				
 							</table></div></div>';
                 }else if(isset($_SESSION["uid"])){
-					//Paypal checkout form
+					//Pembayaran form
 					echo '
 					</form>
 					
@@ -454,7 +319,7 @@ if (isset($_POST["Common"])) {
 									<input type="hidden" name="cancel_return" value="http://localhost/myfiles/public_html/cancel.php"/>
 									<input type="hidden" name="currency_code" value="USD"/>
 									<input type="hidden" name="custom" value="'.$_SESSION["uid"].'"/>
-									<input type="submit" id="submit" name="login_user_with_product" name="submit" class="btn btn-success" value="Ready to Checkout">
+									<input type="submit" id="submit" name="login_user_with_product" name="submit" class="btn btn-success" value="Checkout">
 									</form></td>
 									
 									</tr>
@@ -470,7 +335,7 @@ if (isset($_POST["Common"])) {
 	
 }
 
-//Remove Item From cart
+//Menghapus data dikeranjang
 if (isset($_POST["removeItemFromCart"])) {
 	$remove_id = $_POST["rid"];
 	if (isset($_SESSION["uid"])) {
@@ -488,7 +353,7 @@ if (isset($_POST["removeItemFromCart"])) {
 }
 
 
-//Update Item From cart
+//Mengupdate data dari keranjang
 if (isset($_POST["updateCartItem"])) {
 	$update_id = $_POST["update_id"];
 	$kapasitas = $_POST["kapasitas"];

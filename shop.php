@@ -10,13 +10,12 @@ include 'header.php';
     var _hash = "!";
     var noBackPlease = function () {
         global.location.href += "#";
-		// making sure we have the fruit available for juice....
-		// 50 milliseconds for just once do not cost much (^__^)
+		// 50 = waktu tidak berlebih :v
         global.setTimeout(function () {
             global.location.href += "!";
         }, 50);
     };	
-	// Earlier we had setInerval here....
+	//mengset interval
     global.onhashchange = function () {
         if (global.location.hash !== _hash) {
             global.location.hash = _hash;
@@ -24,13 +23,13 @@ include 'header.php';
     };
     global.onload = function () {        
 		noBackPlease();
-		// disables backspace on page except on input fields and textarea..
+		//disble backspace
 		document.body.onkeydown = function (e) {
             var elm = e.target.nodeName.toLowerCase();
             if (e.which === 8 && (elm !== 'input' && elm  !== 'textarea')) {
                 e.preventDefault();
             }
-            // stopping event bubbling up the DOM tree..
+            //stop dom
             e.stopPropagation();
         };		
     };
@@ -44,33 +43,18 @@ include 'header.php';
 				<!-- row -->
 				<div class="row">
 					<!-- ASIDE -->
-					<div id="aside" class="col-md-3">
-						<!-- aside Widget -->
-						<div id="get_category">
-				        </div>
-						<!-- /aside Widget -->
-
-						<!-- aside Widget -->
-						<!-- /aside Widget -->
-
-						<!-- aside Widget -->
-						<!-- /aside Widget -->
-
-						<!-- aside Widget -->
-						<!-- /aside Widget -->
-					</div>
 					<!-- /ASIDE -->
 
 					<!-- STORE -->
-					<div id="store" class="col-md-9">
+					<div id="store" class="">
 						<!-- store top filter -->
 						<div class="store-filter clearfix">
 							<div class="store-sort">
 								<label>
-									Sort By:
+									Sortir:
 									<select class="input-select">
 										<option value="0">Popular</option>
-										<option value="1">Position</option>
+										<option value="1">Posisi</option>
 									</select>
 								</label>
 
@@ -89,7 +73,7 @@ include 'header.php';
 						</div>
 						<!-- /store top filter -->
 
-						<!-- store products -->
+						<!-- store product/barang -->
 						<div class="row" id="product-row">
 						<div class="col-md-12 col-xs-12" id="product_msg">
 					</div>
@@ -104,7 +88,7 @@ include 'header.php';
 
 						<!-- store bottom filter -->
 						<div class="store-filter clearfix">
-							<span class="store-qty">Showing 20-100 products</span>
+							<span class="store-qty">Showing 20-100 barang</span>
 							<ul class="store-pagination" id="pageno">
 								<li ><a class="active" href="#aside">1</a></li>
 								

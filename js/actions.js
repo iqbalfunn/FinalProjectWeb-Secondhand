@@ -178,7 +178,7 @@ $(document).ready(function(){
 				if(data == "login_success"){
 					window.location.href = "index.php";
 				}else if(data == "cart_login"){
-					window.location.href = "cart.php";
+					window.location.href = "keranjang.php";
 				}else{
 					$("#e_msg").html(data);
 					$(".overlay").hide();
@@ -199,7 +199,7 @@ $(document).ready(function(){
 			success : function(data){
 				$(".overlay").hide();
 				if (data == "register_success") {
-					window.location.href = "cart.php";
+					window.location.href = "keranjang.php";
 				}else{
 					$("#signup_msg").html(data);
 				}
@@ -302,7 +302,7 @@ $(document).ready(function(){
 		$('.total').each(function(){
 			net_total += ($(this).val()-0);
 		})
-		$('.net_total').html("Total : $ " +net_total);
+		$('.net_total').html("Total :Rp. " +net_total);
 
 	})
 	//Change Quantity end here 
@@ -384,7 +384,7 @@ $(document).ready(function(){
 		$('.total').each(function(){
 			net_total += ($(this).val()-0);
 		})
-		$('.net_total').html("Total : $ " +net_total);
+		$('.net_total').html("Total : " +net_total);
 	}
 
 	//remove product from cart

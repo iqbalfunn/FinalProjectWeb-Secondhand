@@ -11,8 +11,6 @@ if (isset($_SESSION["uid"])) {
     $kode_pos= $_POST['kode_pos'];
     $cardname= $_POST['cardname'];
     $cardnumber= $_POST['cardNumber'];
-    $expdate= $_POST['expdate'];
-    $cvv= $_POST['cvv'];
     $user_id=$_SESSION["uid"];
     $cardnumberstr=(string)$cardnumber;
     $total_count=$_POST['total_count'];
@@ -35,9 +33,9 @@ if (isset($_SESSION["uid"])) {
 
 	$sql = "INSERT INTO `data_pesanan` 
 	(`id_pesanan`,`user_id`,`f_name`, `email`,`alamat`, 
-	`kota`, `negara`, `kode_pos`, `cardname`,`cardnumber`,`expdate`,`prod_count`,`total_amt`,`cvv`) 
+	`kota`, `negara`, `kode_pos`, `cardname`,`cardnumber`,`prod_count`,`total_amt`) 
 	VALUES ($id_pesanan, '$user_id','$f_name','$email', 
-    '$alamat', '$kota', '$negara', '$kode_pos','$cardname','$cardnumberstr','$expdate','$total_count','$prod_total','$cvv')";
+    '$alamat', '$kota', '$negara', '$kode_pos','$cardname','$cardnumberstr','$total_count','$prod_total')";
 
 
     if(mysqli_query($con,$sql)){

@@ -1,13 +1,13 @@
 <?php
-#this is Login form page , if user is already logged in then we will not allow user to access this page by executing isset($_SESSION["uid"])
-#if below statment return true then we will send user to their profile.php page
-//in action.php page if user click on "ready to checkout" button that time we will pass data in a form from action.php page
+#ini adalah halaman formulir Login , jika pengguna sudah login maka tidak akan mengizinkan pengguna untuk mengakses halaman ini dengan menjalankan isset($_SESSION["uid"])
+#jika pernyataan di bawah ini mengembalikan true makaakan mengirim pengguna ke halaman profile.php mereka
+// di halaman action.php jika pengguna mengklik tombol "Lanjutkan ke pembayaran" saat akan mengirimkan data dalam bentuk dari halaman action.php
 if (isset($_POST["login_user_with_barang"])) {
-	//this is product list array
+	//produk dengan list array
 	$list_barang = $_POST["id_barang"];
-	//here we are converting array into json format because array cannot be store in cookie
+	//disini kita mengubah array menjadi format json karena array tidak dapat disimpan di cookie
 	$json_e = json_encode($list_barang);
-	//here we are creating cookie and name of cookie is product_list
+	//disini kita membuat cookie dan nama cookie adalah product_list
 	setcookie("list_barang",$json_e,strtotime("+1 day"),"/","","",TRUE);
 
 }

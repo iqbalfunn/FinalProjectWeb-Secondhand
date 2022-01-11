@@ -91,7 +91,7 @@ span.price {
   color: grey;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+/* Tata letak responsif - ketika lebar layar kurang dari 800px, buat dua kolom menumpuk di atas satu sama lain alih-alih bersebelahan (juga ubah arah - buat kolom di atas) */
 @media (max-width: 800px) {
   .row-checkout {
     flex-direction: column-reverse;
@@ -148,16 +148,11 @@ span.price {
                         <label for="cardNumber">Nomor Kartu Kredit</label>
                         <input type="text" class="form-control" id="cardNumber" name="cardNumber" required>
                     </div>
-						<label for="expdate">Berlaku Hingga</label>
-						<input type="text" id="expdate" name="expdate" class="form-control" pattern="^((0[1-9])|(1[0-2]))\/(\d{2})$" placeholder="12/22"required>
-						
-
 						<div class="row">
 						
 						<div class="col-50">
-							<div class="form-group CVV">
-								<label for="cvv">CVV</label>
-								<input type="text" class="form-control" name="cvv" id="cvv" required>
+							<div class="form-group">
+								<label></label>
 						</div>
 						</div>
 					</div>

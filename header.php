@@ -9,7 +9,7 @@ session_start();
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		 <!-- 3 meta tag di atas *harus* didahulukan di head; konten dihead lainnya harus datang *setelah* tag ini -->
 
 		<title>SecondHand</title>
 
@@ -87,10 +87,11 @@ session_start();
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="index.php" class="logo">
-								<p style="font-style:normal; font-size: 33px;color: black;font-family: serif">
+								<a href="#" class="logo">
+								<font style="font-style:normal; font-size: 33px;color: black;font-family: serif">
                                         SecondHand
-									</p>
+                                    </font>
+									
 								</a>
 							</div>
 						</div>
@@ -99,7 +100,7 @@ session_start();
 						<div class="col-md-6">
 							<div class="wrapper">
 								<input type="text" class="input" 
-								placeholder="Cari Barang">
+								placeholder="Search">
 								<div class="searchbtn"><i class="fas fa-search"></i></div>
 							</div>
 						</div>
@@ -109,10 +110,10 @@ session_start();
 						<div class="col-md-3 clearfix">
 							<div class="header-ctn">
 
-								<!-- Cart -->
+								<!-- Cart/Keranjang -->
 								<div class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-										<i class="fas fa-shopping-cart"></i>
+										<i class="fas fa-shopping-cart" style="font-size:28px;color:black"></i>
 										<div class="badge qty">0</div>
 									</a>
 									<div class="cart-dropdown"  >
@@ -152,7 +153,7 @@ session_start();
                                 echo '
                         
                                     <a href="" data-toggle="modal" data-target="#Modal_login"><button type="button" class="btn btn-success">Login</button></a>
-                                    <a href="" data-toggle="modal" data-target="#Modal_register"><button type="button" class="btn btn-primary">Daftar</button></a>
+                                    <a href="" data-toggle="modal" data-target="#Modal_register"><button type="button" class="btn btn-primary">Register</button></a>
                                     
                                   </div>
                                 </div>';
