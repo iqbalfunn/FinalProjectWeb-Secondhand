@@ -44,7 +44,7 @@ include "topheader.php";
                 <div class="table-responsive ps">
                   <table class="table table-hover tablesorter " id="">
                     <thead class=" text-primary">
-                      <tr><th>Nomer Pesanan</th><th>Id User</th><th>Nama Kostumer</th><th>Email</th><th>Alamat</th><th>Kota</th><th>Kode Pos</th><th>Harga Keseluruhan</th><th>Nomer Kartu Pembayaran</th>
+                      <tr><th>Nomer Pesanan</th><th>Id User</th><th>Nama Kostumer</th><th>Email</th><th>Kode Pos</th><th>Harga Keseluruhan</th><th>Nomer Kartu Pembayaran</th>
                     </tr></thead>
                     <tbody>
                       <?php 
