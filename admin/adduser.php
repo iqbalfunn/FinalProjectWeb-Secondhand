@@ -15,7 +15,7 @@ $kota=$_POST['kota'];
 
 mysqli_query($con,"insert into data_user(nama_depan, nama_belakang,email,password,no_telp,alamat,kota) values ('$nama_depan','$nama_belakang','$email','$password','$no_telp','$alamat','$kota')") 
 			or die ("Query 1 is inncorrect........");
-header("location: manage_users.php"); 
+header("location: manageuser.php"); 
 mysqli_close($con);
 }
 

@@ -39,11 +39,11 @@ include "topheader.php";
                         echo "<tr><td>$user_name</td><td>$user_password</td>";
 
                         echo"<td>
-                        <a href='edituser.php?user_id=$user_id' type='button' rel='tooltip' title='' class='btn btn-info btn-link btn-sm' data-original-title='Edit User'>
+                        <a href='edituser.php?user_id=$user_id' type='button' rel='tooltip' title='' class='btn btn-info' data-original-title='Edit User'>
                                 <i class='material-icons'>edit</i>
                               <div class='ripple-container'></div></a>
-                        <a href='manageuser.php?user_id=$user_id&action=delete' type='button' rel='tooltip' title='' class='btn btn-danger btn-link btn-sm' data-original-title='Delete User'>
-                                <i class='material-icons'>close</i>
+                        <a href='manageuser.php?user_id=$user_id&action=delete' type='button' rel='tooltip' title='' class='btn btn-danger' data-original-title='Delete User'>
+                                <i class='material-icons'>Delete</i>
                               <div class='ripple-container'></div></a>
                         </td></tr>";
                         }
