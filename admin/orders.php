@@ -50,9 +50,9 @@ include "topheader.php";
                       <?php 
                         $result=mysqli_query($con,"select id_pesanan,user_id, f_name, email, alamat, kota, kode_pos, total_amt, cardnumber from data_pesanan ")or die ("query 1 incorrect.....");
 
-                        while(list($id_pesanan,$user_id,$f_name,$email,$alamat,$kota,$kodepos,$total_amt,$cardnumber)=mysqli_fetch_array($result))
+                        while(list($id_pesanan,$user_id,$f_name,$email,$kodepos,$total_amt,$cardnumber)=mysqli_fetch_array($result))
                         {	
-                        echo "<tr><td>$id_pesanan</td><td>$user_id</td><td>$f_name</td><td>$email</td><td>$alamat</td><td>$kota</td><td>$kodepos</td><td>$total_amt</td><td>$cardnumber</td>
+                        echo "<tr><td>$id_pesanan</td><td>$user_id</td><td>$f_name</td><td>$email</td><td>$kodepos</td><td>$total_amt</td><td>$cardnumber</td>
 
                         <td>
                         <a class=' btn btn-danger' href='orders.php?id_pesanan=$id_pesanan&action=delete'>Delete</a>
