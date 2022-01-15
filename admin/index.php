@@ -21,7 +21,7 @@ include "topheader.php";
                 <div class="col-md-14">
             <div class="card ">
               <div class="card-header card-header-primary">
-                <h4 class="card-title"> Users List</h4>
+                <h4 class="card-title">Daftar Pengguna</h4>
               </div>
               <div class="card-body">
                 <div class="table-responsive ps">
@@ -50,13 +50,13 @@ include "topheader.php";
             <div class="col-md-6">
             <div class="card ">
               <div class="card-header card-header-primary">
-                <h4 class="card-title"> Categories List</h4>
+                <h4 class="card-title">List Kategori</h4>
               </div>
               <div class="card-body">
                 <div class="table-responsive ps">
                   <table class="table table-hover tablesorter " id="">
                     <thead class=" text-primary">
-                        <tr><th>ID</th><th>Categories</th><th>Count</th>
+                        <tr><th>ID</th><th>Kategori</th><th>Jumlah</th>
                     </tr></thead>
                     <tbody>
                       <?php 
