@@ -43,7 +43,7 @@ include "topheader.php";
          <div class="col-md-7">
             <div class="card">
               <div class="card-header card-header-primary">
-                <h5 class="title">Tambahkan Produk</h5>
+                <h5 class="title">Tambahkan Produk Baru</h5>
               </div>
               <div class="card-body">
                 
@@ -99,7 +99,7 @@ include "topheader.php";
                 
               </div>
               <div class="card-footer">
-                  <button type="submit" id="btn_save" name="btn_save" required class="btn btn-fill btn-primary">Update Produk</button>
+                  <button type="submit" id="btn_save" name="btn_save" required class="btn btn-fill btn-primary">Tambah</button>
               </div>
             </div>
           </div>

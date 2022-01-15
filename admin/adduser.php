@@ -28,8 +28,8 @@ mysqli_close($con);
           <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Add Users</h4>
-                  <p class="card-category">Complete User profile</p>
+                  <h4 class="card-title">Tambahkan Pengguna Baru</h4>
+                  <p class="card-category">Lengkapi Porfil Pengguna</p>
                 </div>
                 <div class="card-body">
                   <form action="" method="post" name="form" enctype="multipart/form-data">
@@ -86,7 +86,7 @@ mysqli_close($con);
                       
                     </div>
                     
-                    <button type="submit" name="btn_save" id="btn_save" class="btn btn-primary pull-right">Update User</button>
+                    <button type="submit" name="btn_save" id="btn_save" class="btn btn-primary pull-right">Tambah</button>
                     <div class="clearfix"></div>
                   </form>
                 </div>
