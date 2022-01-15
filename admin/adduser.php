@@ -24,7 +24,6 @@ mysqli_close($con);
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
-          <!-- your content here -->
           <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
@@ -34,7 +33,6 @@ mysqli_close($con);
                 <div class="card-body">
                   <form action="" method="post" name="form" enctype="multipart/form-data">
                     <div class="row">
-                      
                       <div class="col-md-3">
                         <div class="form-group bmd-form-group">
                           <label class="bmd-label-floating">Nama Depan</label>
@@ -83,9 +81,7 @@ mysqli_close($con);
                           <input type="text" name="kota" id="kota" class="form-control" required>
                         </div>
                       </div>
-                      
                     </div>
-                    
                     <button type="submit" name="btn_save" id="btn_save" class="btn btn-primary pull-right">Tambah</button>
                     <div class="clearfix"></div>
                   </form>
