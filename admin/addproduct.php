@@ -5,6 +5,8 @@ include("../db.php");
 
 if(isset($_POST['btn_save']))
 {
+$id_barang=$_POST['id_barang'];
+$kategori_barang=$_POST['kategori_barang'];
 $nama_barang=$_POST['nama_barang'];
 $details=$_POST['details'];
 $price=$_POST['harga'];
@@ -23,9 +25,9 @@ if($picture_type=="image/jpeg" || $picture_type=="image/jpg" || $picture_type=="
 		$pic_name=time()."_".$picture_name;
 		move_uploaded_file($picture_tmp_name,"../product_images/".$pic_name);
 		
-mysqli_query($con,"insert into barang (kategori_barang, nama_barang, harga_barang, deskripsi_barang, gambar_barang) values ('$product_type','$product_name','$price','$details','$pic_name')") or die ("query incorrect");
+mysqli_query($con,"insert into barang (id_barang, kategori_barang, nama_barang, harga_barang, deskripsi_barang, gambar_barang) values ('$id_barang','$kategori_barang','$nama_barang','$harga_barang','$deskripsi_barang','$pic_name')") or die ("query incorrect");
 
- header("location: sumit_form.php?success=1");
+header("location: sumit_form.php?success=1");
 }
 
 mysqli_close($con);
@@ -49,6 +51,12 @@ include "topheader.php";
                 
                   <div class="row">
                     
+                  <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Id Barang</label>
+                        <input type="text" id="id_barang" required name="id_barang" class="form-control">
+                      </div>
+                    </div>
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Nama Barang</label>
@@ -64,14 +72,14 @@ include "topheader.php";
                      <div class="col-md-12">
                       <div class="form-group">
                         <label>Deskripsi Barang</label>
-                        <textarea rows="4" cols="80" id="details" required name="details" class="form-control"></textarea>
+                        <textarea rows="4" cols="80" id="deskripsi_barang" required name="deskripsi_barang" class="form-control"></textarea>
                       </div>
                     </div>
                   
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Harga Barang</label>
-                        <input type="text" id="price" name="price" required class="form-control" >
+                        <input type="text" id="harga_barang" name="harga_barang" required class="form-control" >
                       </div>
                     </div>
                   </div>
