@@ -50,13 +50,7 @@ include "topheader.php";
               <div class="card-body">
                 
                   <div class="row">
-                    
-                  <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Id Barang</label>
-                        <input type="text" id="id_barang" required name="id_barang" class="form-control">
-                      </div>
-                    </div>
+
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Nama Barang</label>
@@ -82,12 +76,8 @@ include "topheader.php";
                         <input type="text" id="harga_barang" name="harga_barang" required class="form-control" >
                       </div>
                     </div>
-                  </div>
-                 
-                  
-                
-              </div>
-              
+                  </div>              
+              </div>              
             </div>
           </div>
           <div class="col-md-5">
@@ -103,20 +93,17 @@ include "topheader.php";
                       <div class="form-group">
                         <label>Kategori Produk</label>
                         <input type="number" id="product_type" name="product_type" required="[1-6]" class="form-control">
-                      </div>                     
-                
+                      </div>                                    
               </div>
               <div class="card-footer">
-                  <button type="submit" id="btn_save" name="btn_save" required class="btn btn-fill btn-primary">Tambah</button>
+                  <button type="submit" id="btn_save" name="btn_save" required class="btn btn-fill btn-primary">Tambah</button> 
               </div>
             </div>
+          </div>          
           </div>
-          
-        </div>
-         </form>
-          
+          </form>        
         </div>
       </div>
-      <?php
+    <?php
 include "footer.php";
 ?>
