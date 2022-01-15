@@ -1,16 +1,14 @@
-  <?php
+<?php
 session_start();
 include("../db.php");
 
 
 if(isset($_POST['btn_save']))
 {
-$id_barang=$_POST['id_barang'];
 $kategori_barang=$_POST['kategori_barang'];
 $nama_barang=$_POST['nama_barang'];
-$details=$_POST['details'];
-$price=$_POST['harga'];
-$product_type=$_POST['product_type'];
+$harga_barang=$_POST['harga_barang'];
+$deskripsi_barang=$_POST['deskripsi_barang'];
 
 //picture coding
 $picture_name=$_FILES['picture']['name'];
@@ -25,9 +23,9 @@ if($picture_type=="image/jpeg" || $picture_type=="image/jpg" || $picture_type=="
 		$pic_name=time()."_".$picture_name;
 		move_uploaded_file($picture_tmp_name,"../product_images/".$pic_name);
 		
-mysqli_query($con,"insert into barang (id_barang, kategori_barang, nama_barang, harga_barang, deskripsi_barang, gambar_barang) values ('$id_barang','$kategori_barang','$nama_barang','$harga_barang','$deskripsi_barang','$pic_name')") or die ("query incorrect");
+mysqli_query($con,"insert into barang (kategori_barang, nama_barang, harga_barang, deskripsi_barang, gambar_barang) values ('$kategori_barang','$nama_barang','$harga_barang','$deskripsi_barang','$pic_name')") or die ("query incorrect");
 
-header("location: sumit_form.php?success=1");
+ header("location: sumit_form.php?success=1");
 }
 
 mysqli_close($con);
@@ -45,12 +43,11 @@ include "topheader.php";
          <div class="col-md-7">
             <div class="card">
               <div class="card-header card-header-primary">
-                <h5 class="title">Tambahkan Produk Baru</h5>
+                <h5 class="title">Add Product</h5>
               </div>
               <div class="card-body">
                 
                   <div class="row">
-
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Nama Barang</label>
@@ -59,25 +56,28 @@ include "topheader.php";
                     </div>
                     <div class="col-md-4">
                       <div class="">
-                        <label for="">Tambahkan Gambar</label>
+                        <label for="">Tambah Gambar</label>
                         <input type="file" name="picture" required class="btn btn-fill btn-success" id="picture" >
                       </div>
                     </div>
                      <div class="col-md-12">
                       <div class="form-group">
-                        <label>Deskripsi Barang</label>
+                        <label>Deskripsi</label>
                         <textarea rows="4" cols="80" id="deskripsi_barang" required name="deskripsi_barang" class="form-control"></textarea>
                       </div>
                     </div>
-                  
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label>Harga Barang</label>
+                        <label>Harga</label>
                         <input type="text" id="harga_barang" name="harga_barang" required class="form-control" >
                       </div>
                     </div>
-                  </div>              
-              </div>              
+                  </div>
+                 
+                  
+                
+              </div>
+              
             </div>
           </div>
           <div class="col-md-5">
@@ -92,18 +92,24 @@ include "topheader.php";
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Kategori Produk</label>
-                        <input type="number" id="product_type" name="product_type" required="[1-6]" class="form-control">
-                      </div>                                    
+                        <input type="number" id="kategori_barang" name="kategori_barang" required="[1-6]" class="form-control">
+                      </div>
+                    </div>
+                     
+                  
+                
               </div>
               <div class="card-footer">
-                  <button type="submit" id="btn_save" name="btn_save" required class="btn btn-fill btn-primary">Tambah</button> 
+                  <button type="submit" id="btn_save" name="btn_save" required class="btn btn-fill btn-primary">Update Product</button>
               </div>
             </div>
-          </div>          
           </div>
-          </form>        
+          
+        </div>
+         </form>
+          
         </div>
       </div>
-    <?php
+      <?php
 include "footer.php";
 ?>
