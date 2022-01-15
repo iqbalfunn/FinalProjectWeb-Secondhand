@@ -26,7 +26,7 @@ if($picture_type=="image/jpeg" || $picture_type=="image/jpg" || $picture_type=="
 		$pic_name=time()."_".$picture_name;
 		move_uploaded_file($picture_tmp_name,"../product_images/".$pic_name);
 		
-mysqli_query($con,"insert into barang (kategori_barang, merek_barang,nama_barang,harga_barang, deskripsi_barang, gambar_barang,katakunci_barang) values ('$product_type','$brand','$product_name','$price','$details','$pic_name','$tags')") or die ("query incorrect");
+mysqli_query($con,"insert into barang (kategori_barang, merek_barang, nama_barang, harga_barang, deskripsi_barang, gambar_barang, katakunci_barang) values ('$product_type','$brand','$nama_barang','$price','$details','$pic_name','$tags')") or die ("query incorrect");
 
  header("location: sumit_form.php?success=1");
 }
