@@ -8,10 +8,7 @@ if(isset($_POST['btn_save']))
 $nama_barang=$_POST['nama_barang'];
 $details=$_POST['details'];
 $price=$_POST['harga'];
-$c_price=$_POST['c_harga'];
 $product_type=$_POST['product_type'];
-$brand=$_POST['merek'];
-$tags=$_POST['tags'];
 
 //picture coding
 $picture_name=$_FILES['picture']['name'];
@@ -26,7 +23,7 @@ if($picture_type=="image/jpeg" || $picture_type=="image/jpg" || $picture_type=="
 		$pic_name=time()."_".$picture_name;
 		move_uploaded_file($picture_tmp_name,"../product_images/".$pic_name);
 		
-mysqli_query($con,"insert into barang (kategori_barang, nama_barang, harga_barang, deskripsi_barang, gambar_barang, katakunci_barang) values ('$product_type','$nama_barang','$price','$details','$pic_name','$tags')") or die ("query incorrect");
+mysqli_query($con,"insert into barang (kategori_barang, nama_barang, harga_barang, deskripsi_barang, gambar_barang) values ('$product_type','$product_name','$price','$details','$pic_name')") or die ("query incorrect");
 
  header("location: sumit_form.php?success=1");
 }
@@ -46,7 +43,7 @@ include "topheader.php";
          <div class="col-md-7">
             <div class="card">
               <div class="card-header card-header-primary">
-                <h5 class="title">Add Product</h5>
+                <h5 class="title">Tambahkan Produk</h5>
               </div>
               <div class="card-body">
                 
@@ -98,23 +95,7 @@ include "topheader.php";
                       <div class="form-group">
                         <label>Kategori Produk</label>
                         <input type="number" id="product_type" name="product_type" required="[1-6]" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label for="">Merek Produk</label>
-                        <input type="number" id="brand" name="brand" required class="form-control">
-                      </div>
-                    </div>
-                     
-                  
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Kata Kunci Produk</label>
-                        <input type="text" id="tags" name="tags" required class="form-control" >
-                      </div>
-                    </div>
-                  </div>
+                      </div>                     
                 
               </div>
               <div class="card-footer">
