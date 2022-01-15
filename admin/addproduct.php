@@ -43,7 +43,7 @@ include "topheader.php";
          <div class="col-md-7">
             <div class="card">
               <div class="card-header card-header-primary">
-                <h5 class="title">Add Product</h5>
+                <h5 class="title">Tambahkan Produk Baru</h5>
               </div>
               <div class="card-body">
                 
@@ -56,28 +56,24 @@ include "topheader.php";
                     </div>
                     <div class="col-md-4">
                       <div class="">
-                        <label for="">Tambah Gambar</label>
+                        <label for="">Tambahkan Gambar</label>
                         <input type="file" name="picture" required class="btn btn-fill btn-success" id="picture" >
                       </div>
                     </div>
                      <div class="col-md-12">
                       <div class="form-group">
-                        <label>Deskripsi</label>
+                        <label>Deskripsi Barang</label>
                         <textarea rows="4" cols="80" id="deskripsi_barang" required name="deskripsi_barang" class="form-control"></textarea>
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label>Harga</label>
+                        <label>Harga Barang</label>
                         <input type="text" id="harga_barang" name="harga_barang" required class="form-control" >
                       </div>
                     </div>
                   </div>
-                 
-                  
-                
               </div>
-              
             </div>
           </div>
           <div class="col-md-5">
@@ -95,19 +91,14 @@ include "topheader.php";
                         <input type="number" id="kategori_barang" name="kategori_barang" required="[1-6]" class="form-control">
                       </div>
                     </div>
-                     
-                  
-                
               </div>
               <div class="card-footer">
                   <button type="submit" id="btn_save" name="btn_save" required class="btn btn-fill btn-primary">Update Product</button>
               </div>
             </div>
           </div>
-          
         </div>
          </form>
-          
         </div>
       </div>
       <?php
