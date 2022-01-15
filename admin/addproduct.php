@@ -26,7 +26,7 @@ if($picture_type=="image/jpeg" || $picture_type=="image/jpg" || $picture_type=="
 		$pic_name=time()."_".$picture_name;
 		move_uploaded_file($picture_tmp_name,"../product_images/".$pic_name);
 		
-mysqli_query($con,"insert into barang (kategori_barang, merek_barang, nama_barang, harga_barang, deskripsi_barang, gambar_barang, katakunci_barang) values ('$product_type','$brand','$nama_barang','$price','$details','$pic_name','$tags')") or die ("query incorrect");
+mysqli_query($con,"insert into barang (kategori_barang, nama_barang, harga_barang, deskripsi_barang, gambar_barang, katakunci_barang) values ('$product_type','$nama_barang','$price','$details','$pic_name','$tags')") or die ("query incorrect");
 
  header("location: sumit_form.php?success=1");
 }
@@ -54,26 +54,26 @@ include "topheader.php";
                     
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label>Product Title</label>
+                        <label>Nama Barang</label>
                         <input type="text" id="nama_barang" required name="nama_barang" class="form-control">
                       </div>
                     </div>
                     <div class="col-md-4">
                       <div class="">
-                        <label for="">Add Image</label>
+                        <label for="">Tambahkan Gambar</label>
                         <input type="file" name="picture" required class="btn btn-fill btn-success" id="picture" >
                       </div>
                     </div>
                      <div class="col-md-12">
                       <div class="form-group">
-                        <label>Description</label>
+                        <label>Deskripsi Barang</label>
                         <textarea rows="4" cols="80" id="details" required name="details" class="form-control"></textarea>
                       </div>
                     </div>
                   
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label>Pricing</label>
+                        <label>Harga Barang</label>
                         <input type="text" id="price" name="price" required class="form-control" >
                       </div>
                     </div>
@@ -88,7 +88,7 @@ include "topheader.php";
           <div class="col-md-5">
             <div class="card">
               <div class="card-header card-header-primary">
-                <h5 class="title">Categories</h5>
+                <h5 class="title">Kategori</h5>
               </div>
               <div class="card-body">
                 
@@ -96,13 +96,13 @@ include "topheader.php";
                     
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label>Product Category</label>
+                        <label>Kategori Produk</label>
                         <input type="number" id="product_type" name="product_type" required="[1-6]" class="form-control">
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label for="">Product Brand</label>
+                        <label for="">Merek Produk</label>
                         <input type="number" id="brand" name="brand" required class="form-control">
                       </div>
                     </div>
@@ -110,7 +110,7 @@ include "topheader.php";
                   
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label>Product Keywords</label>
+                        <label>Kata Kunci Produk</label>
                         <input type="text" id="tags" name="tags" required class="form-control" >
                       </div>
                     </div>
@@ -118,7 +118,7 @@ include "topheader.php";
                 
               </div>
               <div class="card-footer">
-                  <button type="submit" id="btn_save" name="btn_save" required class="btn btn-fill btn-primary">Update Product</button>
+                  <button type="submit" id="btn_save" name="btn_save" required class="btn btn-fill btn-primary">Update Produk</button>
               </div>
             </div>
           </div>
