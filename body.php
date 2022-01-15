@@ -10,26 +10,23 @@
     <div class="carousel-inner">
 
       <div class="item active">
-        <img src="img/banner3.jpg" alt="Los Angeles" style="width:100%;">
-        
+        <img src="img/secondhand1.jpg" alt="1" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="img/banner2.jpg" style="width:100%;">
-        
+        <img src="img/secondhand2.jpg" alt="2" style="width:100%;">     
       </div>
     
       <div class="item">
-        <img src="img/banner4.jpg" alt="New York" style="width:100%;">
-        
+        <img src="img/secondhand.jpg" alt="3" style="width:100%;">   
       </div>
+
       <div class="item">
-        <img src="img/banner1.jpg" alt="New York" style="width:100%;">
-        
+        <img src="img/secondhand.jpg" alt="4" style="width:100%;">   
       </div>
+
       <div class="item">
-        <img src="img/banner3.jpg" alt="New York" style="width:100%;">
-        
+        <img src="img/secondhand.jpg" alt="5" style="width:100%;">     
       </div>
   
     </div>
@@ -74,7 +71,7 @@
                     include 'db.php';
 								
                     
-					$product_query = "SELECT * FROM barang,kategori WHERE kategori_barang=cat_id AND id_barang BETWEEN 70 AND 75";
+					$product_query = "SELECT * FROM barang,kategori WHERE kategori_barang=cat_id AND id_barang BETWEEN 1 AND 12";
                 $run_query = mysqli_query($con,$product_query);
                 if(mysqli_num_rows($run_query) > 0){
 
