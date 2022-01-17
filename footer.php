@@ -23,11 +23,13 @@
 							<div class="footer">
 								<h3 class="footer-title">Kategori</h3>
 								<ul class="footer-links">
-									<li><a href="#">A</a></li>
-									<li><a href="#">B</a></li>
-									<li><a href="#">C</a></li>
-									<li><a href="#">D</a></li>
-									<li><a href="#">E</a></li>
+									<li><a href="#">Kendaraan</a></li>
+									<li><a href="#">Elektronik</a></li>
+									<li><a href="#">Alat Rumah Tangga</a></li>
+									<li><a href="#">Alat Musik</a></li>
+									<li><a href="#">Buku</a></li>
+									<li><a href="#">Olahraga</a></li>
+									<li><a href="#">Mainan</a></li>
 								</ul>
 							</div>
 						</div>
