@@ -26,7 +26,7 @@ if (isset($_POST["login_user_with_barang"])) {
 								<form onsubmit="return false" id="login" class="login100-form ">
 									<div class="billing-details jumbotron">
                                     	<div class="section-title">
-											<h2 class="login100-form-title p-b-49" >Login</h2>
+											<h2 class="login100-form-title p-b-49">Login</h2>
                                     	</div>
                                    
                                     
@@ -39,7 +39,6 @@ if (isset($_POST["login_user_with_barang"])) {
                                        		<label for="email">Password</label>
                                         	<input class="input input-borders" type="password" name="password" placeholder="password" id="Password" required>
                                     	</div>
-                                    
                                     
                                         <input class="primary-btn btn-block"   type="submit"  Value="Login">
                                         
