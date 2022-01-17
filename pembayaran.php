@@ -116,7 +116,6 @@ span.price {
 			<div class="col-75">
 				<div class="container-checkout">
 				<form id="checkout_form" action="pembayaran_process.php" method="POST" class="was-validated">
-
 					<div class="row-checkout">
 					
 					<div class="col-50">
@@ -129,7 +128,6 @@ span.price {
 						<input type="text" id="adr" name="address" class="form-control" value="'.$row["alamat"].'" required>
 						<label for="city">Kota</label>
 						<input type="text" id="city" name="city" class="form-control" value="'.$row["kota"].'" pattern="^[a-zA-Z ]+$" required>
-
 						<div class="row">
 						<div class="col-50">
 							<label for="kode_pos">Kode Pos</label>
@@ -212,7 +210,6 @@ span.price {
 					<b>$total_count</b>
 					</span>
 				</h4>
-
 					<table class='table table-condensed'>
 					<thead><tr>
 					<th >No</th>
@@ -238,14 +235,12 @@ span.price {
 						$id_barang=$row["id_barang"];
 					
 						echo "	
-
 						<tr><td><p>$item_number_</p></td><td><p>$item_name_</p></td><td ><p>$quantity_</p></td><td ><p>$amount_</p></td></tr>";
 						
 						$i++;
 					}
 
 				echo"
-
 				</tbody>
 				</table>
 				<hr>
