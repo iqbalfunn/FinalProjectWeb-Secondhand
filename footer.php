@@ -23,7 +23,7 @@
 							<div class="footer">
 								<h3 class="footer-title">Kategori</h3>
 								<ul class="footer-links">
-									<li><a href="#">Kendaraan</a></li>
+									<li><a href="shop.php">Kendaraan</a></li>
 									<li><a href="#">Elektronik</a></li>
 									<li><a href="#">Alat Rumah Tangga</a></li>
 									<li><a href="#">Alat Musik</a></li>
