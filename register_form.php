@@ -17,7 +17,7 @@
 								<form id="signup_form" onsubmit="return false" class="login100-form">
 									<div class="billing-details jumbotron">
                                     <div class="section-title">
-                                        <h2 class="login100-form-title p-b-49" >Mendaftar Disini</h2>
+                                        <h2 class="login100-form-title p-b-49" >Daftar</h2>
                                     </div>
                                     <div class="form-group ">
                                     
@@ -48,7 +48,7 @@
                                     
                                     
                                     <div>
-                                       <input class="primary-btn btn-block"  value="Sign Up" type="submit" name="signup_button">
+                                       <input class="primary-btn btn-block"  value="Daftar" type="submit" name="signup_button">
                                     </div>
                                        
                                     </div>
