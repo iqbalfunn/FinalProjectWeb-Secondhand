@@ -10,15 +10,15 @@
     <div class="carousel-inner">
 
       <div class="item active">
-        <img src="img/secondhand1.jpg" alt="1" style="width:100%;">
+        <img src="img/secondhand2.jpg" alt="1" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="img/secondhand2.jpg" alt="2" style="width:100%;">     
+        <img src="img/secondhand1.jpg" alt="2" style="width:100%;">     
       </div>
     
       <div class="item">
-        <img src="img/secondhand1.jpg" alt="3" style="width:100%;">   
+        <img src="img/secondhand2.jpg" alt="3" style="width:100%;">   
       </div>
 
       <div class="item">
@@ -26,7 +26,7 @@
       </div>
 
       <div class="item">
-        <img src="img/secondhand1.jpg" alt="5" style="width:100%;">     
+        <img src="img/secondhand2.jpg" alt="5" style="width:100%;">     
       </div>
   
     </div>
