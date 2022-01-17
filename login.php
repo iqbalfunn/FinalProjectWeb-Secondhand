@@ -14,8 +14,8 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 	$run_query = mysqli_query($con,$sql);
 	$count = mysqli_num_rows($run_query);
     $row = mysqli_fetch_array($run_query);
-		$_SESSION["data_user"] = $row["email"];
-		$_SESSION["data_user"] = $row["password"];
+		$_SESSION["uid"] = $row["user_id"];
+		$_SESSION["name"] = $row["nama_depan"];
 		$ip_add = getenv("REMOTE_ADDR");
 		//membuat cookie di halaman login_form.php jadi jika cookie itu tersedia berarti pengguna tidak login
         
