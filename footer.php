@@ -10,9 +10,9 @@
 								<h3 class="footer-title" >Tentang Kami</h3>
 								<p>Secondhand adalah pusat jual beli barang bekas terpercaya di Indonesia</p>
 								<ul class="footer-links">
-									<li><a href="#"><i class="fa fa-map-marker"></i>Yogyakarta</a></li>
-									<li><a href="#"><i class="fa fa-phone"></i>0888-3242-6534</a></li>
-									<li><a href="#"><i class="fa fa-envelope-o"></i>secondhand@gmail.com</a></li>
+									<li><a href="https://www.google.com/maps?q=Universitas+Amikom+Yogyakarta&ftid=0x2e7a599bd3bdc4ef:0x6f1714b0c4544586" target="_blank" rel="nofollow"><i class="fa fa-map-marker"></i>Yogyakarta</a></li>
+									<li><a href="https://api.whatsapp.com/send?phone=6288806925382" target="_blank" rel="nofollow"><i class="fa fa-phone"></i>0888-0692-5382</a></li>
+									<li><a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank" rel="nofollow"><i class="fa fa-envelope"></i>secondhand@gmail.com</a></li>
 								</ul>
 							</div>
 						</div>

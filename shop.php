@@ -51,7 +51,7 @@ include 'header.php';
 						<div class="store-filter clearfix">
 							<div class="store-sort">
 								<label>
-									Sortir:
+									Urutkan Berdasarkan :
 									<select class="input-select">
 										<option value="0">Popular</option>
 										<option value="1">Posisi</option>
@@ -59,17 +59,13 @@ include 'header.php';
 								</label>
 
 								<label>
-									Show:
+									Tampilkan :
 									<select class="input-select">
 										<option value="0">20</option>
 										<option value="1">50</option>
 									</select>
 								</label>
 							</div>
-							<ul class="store-grid">
-								<li class="active"><i class="fa fa-th"></i></li>
-								<li><a href="#"><i class="fa fa-th-list"></i></a></li>
-							</ul>
 						</div>
 						<!-- /store top filter -->
 

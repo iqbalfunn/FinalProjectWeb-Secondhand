@@ -16,7 +16,7 @@ if(isset($_POST["categoryhome"])){
 					<!-- NAV -->
 					<ul class='main-nav nav navbar-nav'>
                     	<li><a href='index.php'>Home</a></li>
-                    	<li><a href='shop.php'>APA SAJA</a></li>
+                    	<li><a href='shop.php'>Kendaraan</a></li>
 
 
 
