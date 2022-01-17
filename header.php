@@ -153,7 +153,7 @@ session_start();
                                 echo '
                         
                                     <a href="" data-toggle="modal" data-target="#Modal_login"><button type="button" class="btn btn-success">Login</button></a>
-                                    <a href="" data-toggle="modal" data-target="#Modal_register"><button type="button" class="btn btn-primary">Register</button></a>
+                                    <a href="" data-toggle="modal" data-target="#Modal_register"><button type="button" class="btn btn-primary">Daftar</button></a>
                                     
                                   </div>
                                 </div>';
