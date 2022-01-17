@@ -135,34 +135,33 @@ include "header.php";
 
 							<div class="product-options">
 								<label>
-									Size
+									Ukuran
 									<select class="input-select">
-										<option value="0">X</option>
+										<option value="0">S</option>
+										<option value="1">M</option>
+										<option value="2">L</option>
+										<option value="3">XL</option>
 									</select>
 								</label>
 								<label>
-									Color
+									Warna
 									<select class="input-select">
-										<option value="0">Red</option>
+										<option value="0">Hitam</option>
+										<option value="1">Putih</option>
+										<option value="2">Merah</option>
+										<option value="3">Kuning</option>
 									</select>
 								</label>
 							</div>
 
 							<div class="add-to-cart">
-								<div class="qty-label">
-									Qty
-									<div class="input-number">
-										
-										<span class="qty-up">+</span>
-										<span class="qty-down">-</span>
-									</div>
-								</div>
 								<div class="btn-group" style="margin-left: 25px; margin-top: 15px">
-								<button class="add-to-cart-btn" pid="'.$row['id_barang'].'"  id="product" ><i class="fa fa-shopping-cart"></i>Keranjang</button>
+								<button class="add-to-cart-btn" pid="'.$row['id_barang'].'"  id="product" ><i class="fa fa-shopping-cart"></i>Masukkan Keranjang</button>
                                 </div>
 								
 								
 							</div>
+
 							<ul class="product-links">
 								<li>Kategori Lain :</li>
 								<li><a href="shop.php">Kendaraan</a></li>

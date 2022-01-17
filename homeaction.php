@@ -19,7 +19,6 @@ if(isset($_POST["categoryhome"])){
                     	<li><a href='shop.php'>Kendaraan</a></li>
 
 
-
 	";
 	if(mysqli_num_rows($run_query) > 0){
 		while($row = mysqli_fetch_array($run_query)){
