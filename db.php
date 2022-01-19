@@ -6,7 +6,7 @@ $password = "";
 $db = "secondhandsell";
 
 //membuat koneksi
-$con = mysqli_connect($servername, $username, $password,$db);
+$con = mysqli_connect($servername, $username, $password, $db);
 
 //check koneksi
 if (!$con) {
