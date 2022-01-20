@@ -40,6 +40,7 @@ if (isset($_POST["login_user_with_barang"])) {
                                         	<input class="input input-borders" type="password" name="password" placeholder="password" id="Password" required>
                                     	</div>
                                     
+                                    
                                         <input class="primary-btn btn-block"   type="submit"  Value="Login">
                                         
                                         <div class="panel-footer"><div class="alert alert-light"><h4 id="e_msg"></h4></div></div>
