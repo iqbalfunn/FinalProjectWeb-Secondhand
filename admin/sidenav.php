@@ -63,12 +63,11 @@
               <p>Pengaturan Pengguna</p>
             </a>
           </li>
-          <!-- <li class="nav-item active-pro ">
-                <a class="nav-link" href="./upgrade.html">
-                    <i class="material-icons">unarchive</i>
-                    <p>Upgrade to PRO</p>
-                </a>
-            </li> -->
+          <li class="nav-item ">
+            <a class="nav-link" href="barangpesanan.php">
+              <p>Barang Pesanan</p>
+            </a>
+          </li>
         </ul>
       </div>
     </div>

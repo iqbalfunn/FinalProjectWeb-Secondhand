@@ -40,8 +40,7 @@ include "topheader.php";
                 <div class="table-responsive ps">
                   <table class="table table-hover tablesorter " id="">
                     <thead class=" text-primary">
-                      <tr><th>Nomor Pesanan</th><th>Nomor Barang Pesanan</th><th>Nomor Barang</th><th>Kapasitas</th>
-                    </tr></thead>
+                      <tr><th>Nomor Pesanan</th><th>Nomor Urut Pesanan</th><th>Id Barang</th><th>Jumlah Barang</th></tr></thead>
                     <tbody>
                       <?php 
                         $result=mysqli_query($con,"select id_pesanan, id_barang_pesanan, id_barang, kapasitas from barang_pesanan ")or die ("query 1 incorrect.....");
@@ -50,9 +49,7 @@ include "topheader.php";
                         {	
                         echo "<tr><td>$id_pesanan</td><td>$id_barang_pesanan</td><td>$id_barang</td><td>$kapasitas</td>
 
-                        <td>
-                        <a class=' btn btn-danger' href='barangpesanan.php?id_pesanan=$id_pesanan&action=delete'>Delete</a>
-                        </td></tr>";
+                        ";
                         }
                         ?>
                     </tbody>

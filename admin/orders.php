@@ -44,15 +44,15 @@ include "topheader.php";
                 <div class="table-responsive ps">
                   <table class="table table-hover tablesorter " id="">
                     <thead class=" text-primary">
-                      <tr><th>Nomer Pesanan</th><th>Id User</th><th>Nama Customer</th><th>Email</th><th>Kode Pos</th><th>Harga Keseluruhan</th><th>Nomer Kartu Pembayaran</th>
+                      <tr><th>Nomer Pesanan</th><th>Id User</th><th>Nama Customer</th><th>Total Barang</th><th>Email</th><th>Harga Keseluruhan</th><th>Nomer Kartu Pembayaran</th>
                     </tr></thead>
                     <tbody>
                     <?php 
-                        $result=mysqli_query($con,"select id_pesanan,user_id, f_name, email, kode_pos, total_amt, cardnumber from data_pesanan ")or die ("query 1 incorrect.....");
+                        $result=mysqli_query($con,"select id_pesanan,user_id, f_name, prod_count, email, total_amt, cardnumber from data_pesanan ")or die ("query 1 incorrect.....");
 
-                        while(list($id_pesanan,$user_id,$f_name,$email,$kodepos,$total_amt,$cardnumber)=mysqli_fetch_array($result))
+                        while(list($id_pesanan,$user_id,$f_name,$prod_count,$email,$total_amt,$cardnumber)=mysqli_fetch_array($result))
                         {	
-                        echo "<tr><td>$id_pesanan</td><td>$user_id</td><td>$f_name</td><td>$email</td><td>$kodepos</td><td>$total_amt</td><td>$cardnumber</td>
+                        echo "<tr><td>$id_pesanan</td><td>$user_id</td><td>$f_name</td><td>$prod_count</td><td>$email</td><td>$total_amt</td><td>$cardnumber</td>
                         <td>
                         <a class=' btn btn-danger' href='orders.php?id_pesanan=$id_pesanan&action=delete'>Delete</a>
                         </td></tr>";
