@@ -40,17 +40,21 @@
             <a class="nav-link" href="adduser.php">
               <p>Tambahkan Pengguna Baru</p>
             </a>
+          </li>     
+          <li class="nav-item ">
+            <a class="nav-link" href="orders.php">
+              <p>Pesanan</p>
+            </a>
+          </li>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="barangpesanan.php">
+              <p>Barang Pesanan</p>
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="productlist.php">
               <p>List Produk</p>
-            </a>
-            
-          </li>
-          
-          <li class="nav-item ">
-            <a class="nav-link" href="orders.php">
-              <p>Pesanan</p>
             </a>
           </li>
           <li class="nav-item ">
@@ -62,12 +66,6 @@
             <a class="nav-link" href="manageuser.php">
               <p>Pengaturan Pengguna</p>
             </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="barangpesanan.php">
-              <p>Barang Pesanan</p>
-            </a>
-          </li>
         </ul>
       </div>
     </div>
